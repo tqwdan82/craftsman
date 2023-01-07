@@ -1,0 +1,19 @@
+{
+
+     "page":{
+          "paddingHorizontal": "1.25em",
+          "paddingVertical": "1em"          
+     },
+     "pageComponents":[
+          {
+               "componentType":"Table_MC_Editable",
+               "config":{
+                    "name":"testMCeditable",
+                    "res_domain":"http://localhost:8001",
+                    "res_model":"PetTable",
+                    "none_editables": "pid"
+               }
+          }
+     ]
+     
+}

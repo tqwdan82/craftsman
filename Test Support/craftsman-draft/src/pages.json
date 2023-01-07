@@ -1,0 +1,133 @@
+{
+     "home":{
+          "page":{
+               "paddingHorizontal": "1.25em",
+               "paddingVertical": "1em"          
+          },
+          "pageComponents":[
+               {
+                    "componentType":"TextLabelInput",
+                    "config":{
+                         "name": "testInput1",
+                         "style":{
+                              "justifyContent": "flex-start"
+                         },
+                         "label": "Test Field 1",
+                         "textField":{
+                              "required":true
+                         },
+                         "validation": "validateField"
+                    }
+               },
+               {
+                    "componentType":"TextLabelInput",
+                    "config":{
+                         "name": "testInput2",
+                         "style":{
+                              "justifyContent": "flex-start"
+                         },
+                         "label": "Test Field 2",
+                         "textField":{
+                              "required":true
+                         },
+                         "validation": "validateField"
+                    }
+               },
+               {
+                    "componentType":"TextLabelInput",
+                    "config":{
+                         "name": "textInputsValue",
+                         "style":{
+                              "justifyContent": "flex-start"
+                         },
+                         "label": "Sum",
+                         "textField":{
+                              "defaultValue":0
+                         }
+                    }
+               },
+               {
+                    "componentType":"Button",
+                    "config":{
+                         "name": "addBtn",
+                         "label": "Add",
+                         "handler":{
+                              "functionName": "add",
+                              "inputs":["testInput1", "testInput2"],
+                              "output":"textInputsValue"
+                         }
+                    }
+               }
+          ]
+     },
+     "page1":{
+               "page":{
+               "paddingHorizontal": "1.25em",
+               "paddingVertical": "1em"
+          },
+          "pageComponents":[
+               {
+                    "componentType":"TextLabelInput",
+                    "config":{
+                         "name": "testInput1",
+                         "style":{
+                              "justifyContent": "flex-start"
+                         },
+                         "label": "First Name",
+                         "textField":{
+                              "required":true
+                         }
+                    }
+               },
+               {
+                    "componentType":"TextLabelInput",
+                    "config":{
+                         "name": "testInput2",
+                         "style":{
+                              "justifyContent": "flex-start"
+                         },
+                         "label": "Last Name",
+                         "textField":{
+                              "required":true
+                         }
+                    }
+               }
+
+          ]
+     },
+     "page2":{
+          "page":{
+          "paddingHorizontal": "5em",
+          "paddingVertical": "5em"
+     },
+     "pageComponents":[
+          {
+               "componentType":"TextLabelInput",
+               "config":{
+                    "name": "testInput1",
+                    "style":{
+                         "justifyContent": "flex-start"
+                    },
+                    "label": "Age",
+                    "textField":{
+                         "required":true
+                    }
+               }
+          },
+          {
+               "componentType":"TextLabelInput",
+               "config":{
+                    "name": "testInput2",
+                    "style":{
+                         "justifyContent": "flex-start"
+                    },
+                    "label": "Gender",
+                    "textField":{
+                         "required":true
+                    }
+               }
+          }
+
+     ]
+}
+}

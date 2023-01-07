@@ -1,0 +1,176 @@
+{
+
+     "page":{
+          "paddingHorizontal": "1.25em",
+          "paddingVertical": "1em"          
+     },
+     "pageComponents":[
+          {
+               "componentType":"Table_MC_Editable",
+               "config":{
+                    "name":"testMCeditable",
+                    "res_domain":"http://localhost:8001",
+                    "res_model":"PetTable",
+                    "none_editables": ["pid"]
+               }
+          },
+          {
+               "componentType":"TextInput",
+               "config":{
+                    "TextField": {
+                         "name": "testInput0",
+                         "label": "Value 0",
+                         "placeholder": "Enter value 0"
+                    }
+               }
+          },
+          {
+               "componentType":"TextInput",
+               "config":{
+                    "TextField": {
+                         "name": "testInput1",
+                         "label": "Value 1",
+                         "placeholder": "Enter value 1"
+                    }
+               }
+          },
+          {
+               "componentType":"TextInput",
+               "config":{
+                    "TextField": {
+                         "name": "testInput2",
+                         "label": "Value 2",
+                         "placeholder": "Enter value 2"
+                    },
+                    "Validation": {
+                         "functionName": "validateField",
+                         "validFailureType": "error",
+                         "validFailureMessage": "Invalid input. *Hint: Enter a number"
+                    }
+               }
+          },
+          {
+               "componentType":"TextInput",
+               "config":{
+                    "TextField": {
+                         "name": "totalValue",
+                         "label": "Total",
+                         "placeholder": "Total"
+                    }
+               }
+          },
+          {
+               "componentType":"TextInput",
+               "config":{
+                    "TextField": {
+                         "name": "totalValue2",
+                         "label": "Total2",
+                         "placeholder": "Total2"
+                    }
+               }
+          },
+          {
+               "componentType":"Button",
+               "config":{
+                    "label": "Subtract",
+                    "name": "addBtn",
+                    "handler": {
+                         "functionName": "subtract",
+                         "inputs": ["testInput1", "testInput2"],
+                         "outputs": ["totalValue", "totalValue2"]
+                    }
+               }
+          },
+          {
+               "componentType":"Chart_Bar",
+               "config":{
+                    "name":"testTable",
+                    "xaxisKey":"name",
+                    "barKeys":[
+                         {
+                              "key":"uv",
+                              "color":"#82ca9d"
+                         },
+                         {
+
+                              "key":"pv",
+                              "color":"#8884d8"
+                         }
+                    ],
+                    "dataURL":"http://localhost:3001/"
+               }
+          },
+          {
+               "componentType":"Chart_Bar",
+               "config":{
+                    "name":"testTable2",
+                    "xaxisKey":"name",
+                    "barKeys":[
+                         {
+                              "key":"uv",
+                              "color":"#82ca9d"
+                         },
+                         {
+
+                              "key":"pv",
+                              "color":"#8884d8"
+                         }
+                    ],
+                    "data":[
+                         {
+                           "name": "Page A",
+                           "uv": 4000,
+                           "pv": 2400,
+                           "amt": 2400
+                         },
+                         {
+                           "name": "Page B",
+                           "uv": 3000,
+                           "pv": 1398,
+                           "amt": 2210
+                         },
+                         {
+                           "name": "Page C",
+                           "uv": 2000,
+                           "pv": 9800,
+                           "amt": 2290
+                         }
+                    ]
+               }
+          },
+          {
+               "componentType":"SimpleTable",
+               "config":{
+                    "name":"testSimpleTable",
+                    "data":[
+                         {"first":"Mark", "last":"Otto", "handle":"@mdo"},
+                         {"first":"Jacob", "last":"Thornton", "handle":"@fat"}                     
+                    ]
+               }
+          },
+          {
+               "componentType":"SimpleTable",
+               "config":{
+                    "name":"testSimpleTable2",
+                    "dataURL":"http://localhost:3001/data2"
+               }
+          },
+          {
+               "componentType":"SimpleTable",
+               "config":{
+                    "name":"testSimpleTable3",
+                    "dataURL":"http://localhost:3001/data3"
+               }
+          },
+          {
+               "componentType":"Chart_Aggregated_Bar",
+               "config":{
+                    "name":"testAgTable1",
+                    "aggregateBy":"gender",
+                    "color":"#82ca9d",
+                    "dataURL":"http://localhost:3001/data3"
+               }
+          }
+     ]
+     
+}
